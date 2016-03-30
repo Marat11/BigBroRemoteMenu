@@ -1,5 +1,5 @@
 <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,300,600,700&subset=latin,cyrillic-ext' rel='stylesheet' type='text/css'>
-<link href="<?php echo $path ?>/styles/styles.css" type="text/css" rel="stylesheet"/>
+<link href="/include/classes/LikeBroAPI/styles/styles.css" type="text/css" rel="stylesheet"/>
 <div class="custom-bar">
   <div class="links">
     <?php
