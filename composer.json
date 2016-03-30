@@ -1,0 +1,10 @@
+{
+    "name": "bigbro/remote-menu",
+    "description": "Render remote menu from the Google SpreedSheets Data",
+    "repositories": [
+        {
+            "type": "git",
+            "url": "https://github.com/Marat11/BigBroRemoteMenu.git"
+        }
+    ],
+}
