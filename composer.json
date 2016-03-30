@@ -1,4 +1,8 @@
 {
     "name": "bigbro/remote_menu",
-    "description": "Render remote menu from the Google SpreedSheets Data"
+    "description": "Render remote menu from the Google SpreedSheets Data",
+    "license": "MIT",
+    "require": {
+        "php": ">=5.3.0"
+    }
 }
