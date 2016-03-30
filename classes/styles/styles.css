@@ -1,0 +1,29 @@
+.custom-bar {
+  background-color: #0c1f2e;
+  width: 100%;
+  background-image: url('../images/logo.png');
+  background-repeat: no-repeat;
+  float: left;
+  position: relative;
+  height: 36px;
+  background-position: left;
+  font-family: "Open Sans";
+}
+
+.links {
+  float: left;
+  position: relative;
+  padding-left: 93px;
+}
+
+.links-item {
+  float: left;
+  position: relative;
+  padding: 5px 38px 0px 0px;
+}
+
+.links-item a {
+  color: #a7b1be;
+  font-size: 13px;
+  text-decoration: none;
+}
