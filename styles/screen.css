@@ -1,0 +1,87 @@
+@charset "UTF-8";
+/* Welcome to Compass.
+ * In this file you should write your main styles. (or centralize your imports)
+ * Import this file using the following HTML or equivalent:
+ * <link href="/stylesheets/screen.css" media="screen, projection" rel="stylesheet" type="text/css" /> */
+/**
+Определяет flex-контейнер (инлайновый или блочный в зависимости от выбранного значения), подключает flex-контекст для всех его непосредственных потомков
+*/
+/*
+Устанавливает главную ось main-axis, определяя тем самым направление для flex-элементов, размещаемых в контейнере.
+*/
+/**
+Определяет, будет ли контейнер однострочным или многострочным, а также направление поперечной оси,
+определяющей направление, в котором будут располагаться новые строки.
+*/
+/**
+Определяет выравнивание относительно главной оси. Помогает распределить оставшееся свободное место в случае,
+когда элементы строки не «тянутся», либо тянутся, но уже достигли своего максимального размера.
+Также позволяет в некотором роде управлять выравниванием элементов при выходе за границы строки.
+*/
+/**
+Определяет поведение по умолчанию для того, как flex-элементы располагаются относительно поперечной оси на текущей строке.
+Считайте это версией justify-content для поперечной оси (перпендикулярной к основной).
+*/
+/**
+Выравнивает строки flex-контейнера при наличии свободного места на поперечной оси аналогично тому, как это делает justify-content на главной оси.
+*/
+/**
+Определяет для flex-элемента возможность «вырастать» при необходимости. Принимает безразмерное значение, служащее в качестве пропорции.
+Оно определяет, какую долю свободного места внутри контейнера элемент может занять.
+*/
+/**
+Определяет для flex-элемента возможность сжиматься при необходимости.
+*/
+/**
+Определяет размер по умолчанию для элемента перед распределением пространства в контейнере
+*/
+/* line 1, ../sass/base.scss */
+.custom-bar {
+  background-color: #0c1f2e;
+  width: 100%;
+  float: left;
+  position: relative;
+  height: 36px;
+  font-family: "Open Sans";
+}
+/* line 8, ../sass/base.scss */
+.custom-bar .logo {
+  float: left;
+  position: relative;
+  width: 93px;
+  background-image: url("../images/logo.png");
+  background-repeat: no-repeat;
+  height: 36px;
+  background-position: left 0px;
+}
+
+/* line 19, ../sass/base.scss */
+.links {
+  float: left;
+  position: relative;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  width: -webkit-calc(100% - 93px);
+  width: -moz-calc(100% - 93px);
+  width: calc(100% - 93px);
+}
+
+/* line 29, ../sass/base.scss */
+.links-item {
+  display: inline-block;
+  padding: 8px 19px 0px 19px;
+  height: 28px;
+}
+/* line 34, ../sass/base.scss */
+.links-item:hover a {
+  color: #fff;
+}
+
+/* line 40, ../sass/base.scss */
+.links-item a {
+  color: #a7b1be;
+  font-size: 13px;
+  text-decoration: none;
+}

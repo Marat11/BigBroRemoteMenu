@@ -1,0 +1,397 @@
+﻿// ADDS A BROWSER PREFIX TO THE PROPERTY
+@mixin css3-prefix($property, $value) {
+    -webkit-#{$property}: #{$value};
+    -khtml-#{$property}: #{$value};
+    -moz-#{$property}: #{$value};
+    -ms-#{$property}: #{$value};
+    -o-#{$property}: #{$value};
+    #{$property}: #{$value};
+}
+
+// BACKGROUND GRADIENT
+@mixin background-gradient($startColor: #3C3C3C, $endColor: #999999) {
+    background: -webkit-gradient(linear, left top, left bottom, from($startColor), to($endColor));
+    background: -webkit-linear-gradient(top, $startColor, $endColor);
+    background:    -moz-linear-gradient(top, $startColor, $endColor);
+    background:     -ms-linear-gradient(top, $startColor, $endColor);
+    background:      -o-linear-gradient(top, $startColor, $endColor);
+    background:         linear-gradient(top, $startColor, $endColor);
+    filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}');
+}
+
+// BACKGROUND HORIZONTAL
+@mixin background-horizontal($startColor: #3C3C3C, $endColor: #999999) {
+    background: -webkit-gradient(linear, left top, right top, from($startColor), to($endColor));
+    background: -webkit-linear-gradient(left, $startColor, $endColor);
+    background:    -moz-linear-gradient(left, $startColor, $endColor);
+    background:     -ms-linear-gradient(left, $startColor, $endColor);
+    background:      -o-linear-gradient(left, $startColor, $endColor);
+    background:         linear-gradient(left, $startColor, $endColor);
+    filter:            progid:DXImageTransform.Microsoft.gradient(startColorStr='#{$startColor}', endColorStr='#{$endColor}', gradientType='1');
+}
+
+
+
+// BACKGROUND RADIAL
+@mixin background-radial($startColor: #FFFFFF, $startPos: 0%, $endColor: #000000, $endPos:100%) {
+    background: -moz-radial-gradient(center, ellipse cover, $startColor $startPos, $endColor $endPos);
+    background: -webkit-gradient(radial, center center, 0px, center center, 100%, color-stop($startPos,$startColor), color-stop($endPos,$endColor));
+    background: -webkit-radial-gradient(center, ellipse cover, $startColor $startPos,$endColor $endPos);
+    background: -o-radial-gradient(center, ellipse cover, $startColor $startPos,$endColor $endPos);
+    background: -ms-radial-gradient(center, ellipse cover, $startColor $startPos,$endColor $endPos);
+    background: radial-gradient(ellipse at center, $startColor $startPos,$endColor $endPos);
+}
+
+// BACKGROUND SIZE
+@mixin background-size($width: 100%, $height: $width) {
+    @if type-of($width) == 'number' and $height != null {
+        @include css3-prefix('background-size', $width $height);
+    } @else {
+        @include css3-prefix('background-size', $width);
+    }
+}
+
+// BACKGROUND COLOR OPACITY
+@mixin background-opacity($color: #000, $opacity: 0.85) {
+    background: $color;
+    background: rgba($color, $opacity);
+}
+
+// BORDER RADIUS
+@mixin border-radius($radius: 5px) {
+    @include css3-prefix('border-radius', $radius);
+}
+
+@mixin border-radius-separate($topLeftRadius: 5px, $topRightRadius: 5px, $bottomLeftRadius: 5px, $bottomRightRadius: 5px) {
+    -webkit-border-top-left-radius:     $topLeftRadius;
+    -webkit-border-top-right-radius:    $topRightRadius;
+    -webkit-border-bottom-right-radius: $bottomRightRadius;
+    -webkit-border-bottom-left-radius:  $bottomLeftRadius;
+
+    -moz-border-radius-topleft:     $topLeftRadius;
+    -moz-border-radius-topright:    $topRightRadius;
+    -moz-border-radius-bottomright: $bottomRightRadius;
+    -moz-border-radius-bottomleft:  $bottomLeftRadius;
+
+    border-top-left-radius:     $topLeftRadius;
+    border-top-right-radius:    $topRightRadius;
+    border-bottom-right-radius: $bottomRightRadius;
+    border-bottom-left-radius:  $bottomLeftRadius;
+}
+
+// BOX RGBA
+@mixin box-rgba($r: 60, $g: 3, $b: 12, $opacity: 0.23, $color: #3C3C3C) {
+    background-color: transparent;
+    background-color: rgba($r, $g, $b, $opacity);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#{$color}',endColorstr='#{$color}');
+    zoom:   1;
+}
+
+
+// BOX SHADOW
+@mixin box-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4), $inset: "") {
+    @if ($inset != "") {
+        @include css3-prefix('box-shadow', $inset $x $y $blur $color);
+    } @else {
+        @include css3-prefix('box-shadow', $x $y $blur $color);
+    }
+}
+
+// BOX SIZING
+@mixin box-sizing($type: border-box) {
+    @include css3-prefix('box-sizing', $type);
+}
+
+// COLUMNS
+@mixin columns($count: 3, $gap: 10) {
+    @include css3-prefix('column-count', $count);
+    @include css3-prefix('column-gap', $gap);
+}
+
+// DOUBLE BORDERS
+@mixin double-borders($colorOne: #3C3C3C, $colorTwo: #999999, $radius: 0) {
+    border: 1px solid $colorOne;
+
+    @include css3-prefix('box-shadow', 0 0 0 1px $colorTwo);
+
+    @include border-radius( $radius );
+}
+
+// FLEX
+@mixin flex($value: 1) {
+    @include css3-prefix('box-flex', $value);
+}
+
+
+// OPACITY
+@mixin opacity($opacity: 0.5) {
+    $opacityMultiplied: ($opacity * 100);
+
+    filter:         alpha(opacity=$opacityMultiplied);
+    -ms-filter:     "progid:DXImageTransform.Microsoft.Alpha(Opacity=" + $opacityMultiplied + ")";
+    @include css3-prefix('opacity', $opacity);
+}
+
+
+// OUTLINE RADIUS
+@mixin outline-radius($radius: 5px) {
+    @include css3-prefix('outline-radius', $radius);
+}
+
+// RESIZE
+@mixin resize($direction: both) {
+    @include css3-prefix('resize', $direction);
+}
+
+// ROTATE
+@mixin rotate($deg: 0, $m11: 0, $m12: 0, $m21: 0, $m22: 0) {
+    @include css3-prefix('transform', rotate($deg + deg));
+    filter: progid:DXImageTransform.Microsoft.Matrix(
+                    M11=#{$m11}, M12=#{$m12}, M21=#{$m21}, M22=#{$m22}, sizingMethod='auto expand');
+    zoom: 1;
+}
+
+// TEXT SHADOW
+@mixin text-shadow($x: 2px, $y: 2px, $blur: 5px, $color: rgba(0,0,0,.4)) {
+    text-shadow: $x $y $blur $color;
+}
+
+// TRANSFORM
+@mixin transform($params) {
+    @include css3-prefix('transform', $params);
+}
+
+// TRANSFORM-ORIGIN
+@mixin transform-origin($params) {
+    @include css3-prefix('transform-origin', $params);
+}
+
+// TRANSFORM STYLE
+@mixin transform-style($style: preserve-3d) {
+    @include css3-prefix('transform-style', $style);
+}
+
+// TRANSITION
+@mixin transition($properties...) {
+
+    @if length($properties) >= 1 {
+        @include css3-prefix('transition', $properties);
+    }
+    @else {
+        @include css3-prefix('transition',  "all 0.3s ease-in-out 0s");
+    }
+}
+
+
+// KEYFRAMES
+@mixin keyframes($animation-name) {
+    @-webkit-keyframes #{$animation-name} {
+        @content;
+    }
+    @-moz-keyframes #{$animation-name} {
+        @content;
+    }
+    @-ms-keyframes #{$animation-name} {
+        @content;
+    }
+    @-o-keyframes #{$animation-name} {
+        @content;
+    }
+    @keyframes #{$animation-name} {
+        @content;
+    }
+}
+
+// ANIMATION
+@mixin animation($str) {
+    @include css3-prefix('animation', $str);
+}
+
+@mixin pseudo-styler() {
+    position: absolute;
+    content: '';
+    display: block;
+}
+
+@mixin ico-set($position-x, $position-y){
+    background: url(../images/ico-set.png) $position-x $position-y no-repeat;
+
+    .retina-screen & {
+        background-image: url(../images/ico-set@2x.png);
+    }
+}
+
+@mixin stretch() {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+
+@mixin grab-cursor() {
+    cursor: move;
+    cursor: -webkit-grab;
+    cursor: -moz-grab;
+    cursor: -o-grab;
+    cursor: -ms-grab;
+    cursor: grab;
+}
+
+@mixin grabbing-cursor() {
+    cursor: move;
+    cursor: -webkit-grabbing;
+    cursor: -moz-grabbing;
+    cursor: -o-grabbing;
+    cursor: -ms-grabbing;
+    cursor: grabbing;
+}
+
+@mixin placeholder {
+    &::-webkit-input-placeholder {@content}
+    &:-moz-placeholder           {@content}
+    &::-moz-placeholder          {@content}
+    &:-ms-input-placeholder      {@content}
+}
+
+@mixin border-box(){
+    @include box-sizing(border-box);
+}
+@mixin cover-bg{
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center center;
+}
+
+@mixin calc($key, $value) {
+  #{$key}: -webkit-calc(#{$value});
+  #{$key}: -moz-calc(#{$value});
+  #{$key}: calc(#{$value});
+}
+
+@mixin centerer {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+@mixin clearfix {
+  &:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+}
+@mixin simple-width {
+  @include mq($max-width: 1023px) {
+    @content;
+  }
+}
+
+@mixin wide-desktop {
+  @include mq($min-width: 1024px) {
+    @content;
+  }
+}
+
+@mixin average-screen {
+  @include mq($min-width: 768px) {
+    @content;
+  }
+}
+
+@mixin small-screen {
+  @include mq($max-width: 375px) {
+    @content;
+  }
+}
+
+@mixin super-small-screen {
+  @include mq($max-width: 320px) {
+    @content;
+  }
+}
+
+@mixin placeholder {
+  &.placeholder { @content }
+  &:-moz-placeholder { @content }
+  &::-webkit-input-placeholder { @content }
+}
+
+/**
+Определяет flex-контейнер (инлайновый или блочный в зависимости от выбранного значения), подключает flex-контекст для всех его непосредственных потомков
+*/
+@mixin flex-display($display: flex) {
+  display: #{$display};
+}
+
+/*
+Устанавливает главную ось main-axis, определяя тем самым направление для flex-элементов, размещаемых в контейнере.
+*/
+@mixin flex-direction($direction: row) {
+  flex-direction: #{$direction};
+}
+
+/**
+Определяет, будет ли контейнер однострочным или многострочным, а также направление поперечной оси,
+определяющей направление, в котором будут располагаться новые строки.
+*/
+@mixin flex-wrap($wrap: wrap) {
+  flex-wrap: #{$wrap};
+}
+
+/**
+Определяет выравнивание относительно главной оси. Помогает распределить оставшееся свободное место в случае,
+когда элементы строки не «тянутся», либо тянутся, но уже достигли своего максимального размера.
+Также позволяет в некотором роде управлять выравниванием элементов при выходе за границы строки.
+*/
+@mixin flex-justify-content($justify_content: flex-start) {
+  justify-content: #{$justify_content};
+}
+
+/**
+Определяет поведение по умолчанию для того, как flex-элементы располагаются относительно поперечной оси на текущей строке.
+Считайте это версией justify-content для поперечной оси (перпендикулярной к основной).
+*/
+
+@mixin flex-align-items($align_items: flex-start) {
+  align-items: #{$align_items};
+}
+
+/**
+Выравнивает строки flex-контейнера при наличии свободного места на поперечной оси аналогично тому, как это делает justify-content на главной оси.
+*/
+@mixin flex-align-content($align_content: flex-start) {
+  align-content: #{$align_content};
+}
+
+@mixin flex-order($order) {
+  order: #{$order};
+}
+
+/**
+Определяет для flex-элемента возможность «вырастать» при необходимости. Принимает безразмерное значение, служащее в качестве пропорции.
+Оно определяет, какую долю свободного места внутри контейнера элемент может занять.
+*/
+@mixin flex-grow($grow: 0) {
+  flex-grow: #{$grow};
+}
+
+/**
+Определяет для flex-элемента возможность сжиматься при необходимости.
+*/
+@mixin flex-shrink($shrink: 1) {
+  flex-shrink: #{$shrink};
+}
+
+/**
+Определяет размер по умолчанию для элемента перед распределением пространства в контейнере
+*/
+@mixin flex-basis($flex_basis: auto) {
+  flex-basis: #{$flex_basis};
+}
+

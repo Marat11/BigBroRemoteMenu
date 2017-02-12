@@ -1,0 +1,44 @@
+.custom-bar {
+  background-color: #0c1f2e;
+  width: 100%;
+  float: left;
+  position: relative;
+  height: 36px;
+  font-family: "Open Sans";
+  .logo {
+    float: left;
+    position: relative;
+    width: 93px;
+    background-image: url('../images/logo.png');
+    background-repeat: no-repeat;
+    height: 36px;
+    background-position: left 0px;
+  }
+}
+
+.links {
+  float: left;
+  position: relative;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  @include calc("width", "100% - 93px");
+}
+
+.links-item {
+  display: inline-block;
+  padding: 8px 19px 0px 19px;
+  height: 28px;
+  &:hover {
+    a {
+      color: #fff;
+    }
+  }
+}
+
+.links-item a {
+  color: #a7b1be;
+  font-size: 13px;
+  text-decoration: none;
+}
