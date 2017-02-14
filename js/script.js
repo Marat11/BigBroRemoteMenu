@@ -6,12 +6,10 @@ $(document).ready(function(){
   }, function() {
     var visible = false;
     $('.links-item').each(function(index, item) {
-      console.log(item);
       if ($(item).css('display') == 'block') {
         visible = true;
       }
     });
-    console.log(visible);
     if ($('.links').hasClass('active') && !visible) {
       $('.links').removeClass('active');
     }
