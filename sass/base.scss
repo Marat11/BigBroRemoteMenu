@@ -24,6 +24,9 @@
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
   @include calc("width", "100% - 93px");
+  &.active {
+    height: 100px;
+  }
 }
 
 .links-item {
@@ -33,6 +36,39 @@
   &:hover {
     a {
       color: #fff;
+    }
+    .children {
+      display: block;
+    }
+  }
+  .children {
+    float: left;
+    position: absolute;
+    background-color: #142c3f;
+    display: none;
+    padding: 18px;
+    margin-top: 10px;
+    ul {
+      list-style: none;
+      padding: 0px;
+      margin: 0px;
+      li {
+        list-style: none;
+        padding: 10px 0px;
+        margin: 0px;
+        &:first-child {
+          padding-top: 0px;
+        }
+        &:last-child {
+          padding-bottom: 0px;
+        }
+        a {
+          color: #7b8998;
+          &:hover {
+            color: #fff;
+          }
+        }
+      }
     }
   }
 }

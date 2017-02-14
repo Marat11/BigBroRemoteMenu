@@ -67,19 +67,64 @@
   width: -moz-calc(100% - 93px);
   width: calc(100% - 93px);
 }
+/* line 27, ../sass/base.scss */
+.links.active {
+  height: 100px;
+}
 
-/* line 29, ../sass/base.scss */
+/* line 32, ../sass/base.scss */
 .links-item {
   display: inline-block;
   padding: 8px 19px 0px 19px;
   height: 28px;
 }
-/* line 34, ../sass/base.scss */
+/* line 37, ../sass/base.scss */
 .links-item:hover a {
   color: #fff;
 }
-
 /* line 40, ../sass/base.scss */
+.links-item:hover .children {
+  display: block;
+}
+/* line 44, ../sass/base.scss */
+.links-item .children {
+  float: left;
+  position: absolute;
+  background-color: #142c3f;
+  display: none;
+  padding: 18px;
+  margin-top: 10px;
+}
+/* line 51, ../sass/base.scss */
+.links-item .children ul {
+  list-style: none;
+  padding: 0px;
+  margin: 0px;
+}
+/* line 55, ../sass/base.scss */
+.links-item .children ul li {
+  list-style: none;
+  padding: 10px 0px;
+  margin: 0px;
+}
+/* line 59, ../sass/base.scss */
+.links-item .children ul li:first-child {
+  padding-top: 0px;
+}
+/* line 62, ../sass/base.scss */
+.links-item .children ul li:last-child {
+  padding-bottom: 0px;
+}
+/* line 65, ../sass/base.scss */
+.links-item .children ul li a {
+  color: #7b8998;
+}
+/* line 67, ../sass/base.scss */
+.links-item .children ul li a:hover {
+  color: #fff;
+}
+
+/* line 76, ../sass/base.scss */
 .links-item a {
   color: #a7b1be;
   font-size: 13px;
