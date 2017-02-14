@@ -44,8 +44,19 @@
   height: 36px;
   font-family: "Open Sans";
 }
-/* line 8, ../sass/base.scss */
-.custom-bar .logo {
+
+/* line 10, ../sass/base.scss */
+.links {
+  float: left;
+  position: relative;
+  white-space: nowrap;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  -ms-overflow-style: -ms-autohiding-scrollbar;
+  width: 100%;
+}
+/* line 11, ../sass/base.scss */
+.links .logo {
   float: left;
   position: relative;
   width: 93px;
@@ -54,22 +65,9 @@
   height: 36px;
   background-position: left 0px;
 }
-
-/* line 19, ../sass/base.scss */
-.links {
-  float: left;
-  position: relative;
-  white-space: nowrap;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
-  width: -webkit-calc(100% - 93px);
-  width: -moz-calc(100% - 93px);
-  width: calc(100% - 93px);
-}
 /* line 27, ../sass/base.scss */
 .links.active {
-  height: 100px;
+  height: 400px;
 }
 
 /* line 32, ../sass/base.scss */
@@ -106,25 +104,26 @@
   list-style: none;
   padding: 10px 0px;
   margin: 0px;
+  line-height: 10px;
 }
-/* line 59, ../sass/base.scss */
+/* line 60, ../sass/base.scss */
 .links-item .children ul li:first-child {
   padding-top: 0px;
 }
-/* line 62, ../sass/base.scss */
+/* line 63, ../sass/base.scss */
 .links-item .children ul li:last-child {
   padding-bottom: 0px;
 }
-/* line 65, ../sass/base.scss */
+/* line 66, ../sass/base.scss */
 .links-item .children ul li a {
   color: #7b8998;
 }
-/* line 67, ../sass/base.scss */
+/* line 68, ../sass/base.scss */
 .links-item .children ul li a:hover {
   color: #fff;
 }
 
-/* line 76, ../sass/base.scss */
+/* line 77, ../sass/base.scss */
 .links-item a {
   color: #a7b1be;
   font-size: 13px;

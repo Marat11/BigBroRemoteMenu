@@ -1,4 +1,5 @@
 $(document).ready(function(){
+  $('.links').niceScroll();
   $('.links').hover(function(){
     if (!$('.links').hasClass('active')) {
       $('.links').addClass('active');

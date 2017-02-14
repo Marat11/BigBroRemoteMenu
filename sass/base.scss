@@ -5,6 +5,9 @@
   position: relative;
   height: 36px;
   font-family: "Open Sans";
+}
+
+.links {
   .logo {
     float: left;
     position: relative;
@@ -14,18 +17,15 @@
     height: 36px;
     background-position: left 0px;
   }
-}
-
-.links {
   float: left;
   position: relative;
   white-space: nowrap;
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
   -ms-overflow-style: -ms-autohiding-scrollbar;
-  @include calc("width", "100% - 93px");
+  width: 100%;
   &.active {
-    height: 100px;
+    height: 400px;
   }
 }
 
@@ -56,6 +56,7 @@
         list-style: none;
         padding: 10px 0px;
         margin: 0px;
+        line-height: 10px;
         &:first-child {
           padding-top: 0px;
         }
