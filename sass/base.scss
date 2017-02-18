@@ -19,20 +19,26 @@
       li {
         float: left;
         list-style: none;
+        margin: 0px;
         &.links-item {
-          padding: 5px 19px 0px 19px;
+          padding: 5px 19px 0px 15px;
           height: 31px;
           &:hover {
-            a {
+            a, span {
               color: #fff;
             }
             .children {
               display: block;
             }
           }
+          a, span {
+            display: inline-block;
+            vertical-align: middle;
+            padding-top: 3px;
+          }
         }
         &.logo {
-          width: 93px;
+          width: 69px;
           background-image: url('../images/logo.png');
           background-repeat: no-repeat;
           height: 36px;
@@ -55,7 +61,7 @@
     width: auto;
     background-color: #142c3f;
     display: none;
-    padding: 12px 15px 13px 15px;
+    padding: 10px 15px 13px 15px;
     margin-top: 36px;
     &.active {
       display: block;
@@ -68,7 +74,7 @@
         list-style: none;
         padding: 8px 0px;
         margin: 0px;
-        line-height: 14px;
+        line-height: 12px;
         &:first-child {
           padding-top: 0px;
         }
@@ -88,8 +94,14 @@
   }
 }
 
-.links-item a {
-  color: #a7b1be;
-  font-size: 13px;
-  text-decoration: none;
+.links-item {
+  a, span {
+    color: #a7b1be;
+    font-size: 13px;
+    text-decoration: none;
+  }
+  span {
+    display: inline-block;
+    vertical-align: middle;
+  }
 }
