@@ -1,62 +1,74 @@
 .custom-bar {
-  background-color: #0c1f2e;
-  width: 100%;
-  float: left;
-  position: relative;
-  height: 36px;
   font-family: "Open Sans";
-}
-
-.links {
-  .logo {
-    float: left;
-    position: relative;
-    width: 93px;
-    background-image: url('../images/logo.png');
-    background-repeat: no-repeat;
-    height: 36px;
-    background-position: left 0px;
-  }
-  float: left;
-  position: relative;
-  white-space: nowrap;
-  overflow-x: auto;
-  -webkit-overflow-scrolling: touch;
-  -ms-overflow-style: -ms-autohiding-scrollbar;
   width: 100%;
-  &.active {
-    height: 400px;
+  display: inline-block;
+  overflow-x: hidden;
+  height: 36px;
+  .links {
+    background-color: #0c1f2e;
+    display: inline-block;
+    width: 100%;
+    height: 36px;
+    ul {
+      display: inline-block;
+      width: 100%;
+      height: 100%;
+      list-style: none;
+      margin: 0px;
+      padding: 0px;
+      li {
+        float: left;
+        list-style: none;
+        &.links-item {
+          padding: 5px 19px 0px 19px;
+          height: 31px;
+          &:hover {
+            a {
+              color: #fff;
+            }
+            .children {
+              display: block;
+            }
+          }
+        }
+        &.logo {
+          width: 93px;
+          background-image: url('../images/logo.png');
+          background-repeat: no-repeat;
+          height: 36px;
+          background-position: left 0px;
+        }
+
+      }
+    }
   }
 }
-
-.links-item {
-  display: inline-block;
-  padding: 8px 19px 0px 19px;
-  height: 28px;
-  &:hover {
-    a {
-      color: #fff;
-    }
-    .children {
-      display: block;
-    }
-  }
-  .children {
+.children-bar {
+  font-family: "Open Sans";
+  float: left;
+  position: absolute;
+  top: 0px;
+  width: 100%;
+  .children-menu {
     float: left;
     position: absolute;
+    width: auto;
     background-color: #142c3f;
     display: none;
-    padding: 18px;
-    margin-top: 10px;
+    padding: 12px 15px 13px 15px;
+    margin-top: 36px;
+    &.active {
+      display: block;
+    }
     ul {
       list-style: none;
       padding: 0px;
       margin: 0px;
       li {
         list-style: none;
-        padding: 10px 0px;
+        padding: 8px 0px;
         margin: 0px;
-        line-height: 10px;
+        line-height: 14px;
         &:first-child {
           padding-top: 0px;
         }
@@ -64,7 +76,9 @@
           padding-bottom: 0px;
         }
         a {
+          font-size: 13px;
           color: #7b8998;
+          text-decoration: none;
           &:hover {
             color: #fff;
           }
