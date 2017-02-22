@@ -2,7 +2,7 @@ $(document).ready(function () {
   var options        = {
         horizontal: 1,
         itemNav: 'basic',
-        smart: 1,
+        smart: false,
         mouseDragging: 1,
         touchDragging: 1,
         releaseSwing: 1,
