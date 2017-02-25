@@ -2,15 +2,8 @@ $(document).ready(function () {
   var options        = {
         horizontal: 1,
         itemNav: 'basic',
-//        smart: false,
         mouseDragging: 1,
         touchDragging: 1,
-//        releaseSwing: 1,
-//        startAt: 0,
-//        speed: 300,
-//        elasticBounds: true,
-//        dragHandle: 1,
-//        dynamicHandle: 1,
       },
       submenu_active = false;
   $('#links').sly(options, {
