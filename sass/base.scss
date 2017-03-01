@@ -1,11 +1,10 @@
 .custom-bar {
   font-family: "Open Sans";
   width: 100%;
-  display: inline-block;
   overflow-x: hidden;
   height: 36px;
-  position: fixed;
-  top: 0px;
+  float: left;
+  position: relative;
   .links {
     background-color: #0c1f2e;
     display: inline-block;
@@ -67,6 +66,7 @@
   position: absolute;
   top: 0px;
   width: 100%;
+  z-index: 99999;
   .children-menu {
     float: left;
     position: absolute;
