@@ -3,18 +3,17 @@
   font-family: "Open Sans";
   width: 100%;
   overflow-x: hidden;
-  height: 36px;
   float: left;
   position: relative;
 }
-/* line 8, ../sass/base.scss */
+/* line 7, ../sass/base.scss */
 .custom-bar .links {
   background-color: #0c1f2e;
   display: inline-block;
   width: 100%;
   height: 36px;
 }
-/* line 13, ../sass/base.scss */
+/* line 12, ../sass/base.scss */
 .custom-bar .links ul {
   display: block;
   width: 100%;
@@ -23,39 +22,39 @@
   margin: 0px;
   padding: 0px;
 }
-/* line 20, ../sass/base.scss */
+/* line 19, ../sass/base.scss */
 .custom-bar .links ul li {
   float: left;
   list-style: none;
   margin: 0px;
 }
-/* line 24, ../sass/base.scss */
+/* line 23, ../sass/base.scss */
 .custom-bar .links ul li.links-item {
   padding: 0px 19px 0px 15px;
   height: 36px;
   vertical-align: middle;
 }
-/* line 32, ../sass/base.scss */
+/* line 31, ../sass/base.scss */
 .custom-bar .links ul li.links-item:hover a, .custom-bar .links ul li.links-item:hover span {
   color: #fff;
 }
-/* line 35, ../sass/base.scss */
+/* line 34, ../sass/base.scss */
 .custom-bar .links ul li.links-item:hover .children {
   display: block;
 }
-/* line 39, ../sass/base.scss */
+/* line 38, ../sass/base.scss */
 .custom-bar .links ul li.links-item a, .custom-bar .links ul li.links-item span {
   display: inline-block;
   vertical-align: middle;
   padding-top: 8px;
 }
-/* line 46, ../sass/base.scss */
+/* line 45, ../sass/base.scss */
 .custom-bar .links ul li.last {
   padding: 0px 5px;
   margin: 0px;
   width: 25px;
 }
-/* line 51, ../sass/base.scss */
+/* line 50, ../sass/base.scss */
 .custom-bar .links ul li.logo {
   width: 69px;
   background-image: url("../images/logo.png");
@@ -64,7 +63,7 @@
   background-position: left 0px;
 }
 
-/* line 63, ../sass/base.scss */
+/* line 62, ../sass/base.scss */
 .children-bar {
   font-family: "Open Sans";
   float: left;
@@ -73,7 +72,7 @@
   width: 100%;
   z-index: 99999;
 }
-/* line 70, ../sass/base.scss */
+/* line 69, ../sass/base.scss */
 .children-bar .children-menu {
   float: left;
   position: absolute;
@@ -83,49 +82,49 @@
   padding: 10px 15px 13px 15px;
   margin-top: 36px;
 }
-/* line 78, ../sass/base.scss */
+/* line 77, ../sass/base.scss */
 .children-bar .children-menu.active {
   display: block;
 }
-/* line 81, ../sass/base.scss */
+/* line 80, ../sass/base.scss */
 .children-bar .children-menu ul {
   list-style: none;
   padding: 0px;
   margin: 0px;
 }
-/* line 85, ../sass/base.scss */
+/* line 84, ../sass/base.scss */
 .children-bar .children-menu ul li {
   list-style: none;
   padding: 8px 0px;
   margin: 0px;
   line-height: 12px;
 }
-/* line 90, ../sass/base.scss */
+/* line 89, ../sass/base.scss */
 .children-bar .children-menu ul li:first-child {
   padding-top: 0px;
 }
-/* line 93, ../sass/base.scss */
+/* line 92, ../sass/base.scss */
 .children-bar .children-menu ul li:last-child {
   padding-bottom: 0px;
 }
-/* line 96, ../sass/base.scss */
+/* line 95, ../sass/base.scss */
 .children-bar .children-menu ul li a {
   font-size: 13px;
   color: #7b8998;
   text-decoration: none;
 }
-/* line 100, ../sass/base.scss */
+/* line 99, ../sass/base.scss */
 .children-bar .children-menu ul li a:hover {
   color: #fff;
 }
 
-/* line 110, ../sass/base.scss */
+/* line 109, ../sass/base.scss */
 .links-item a, .links-item span {
   color: #a7b1be;
   font-size: 13px;
   text-decoration: none;
 }
-/* line 115, ../sass/base.scss */
+/* line 114, ../sass/base.scss */
 .links-item span {
   display: inline-block;
   vertical-align: middle;
