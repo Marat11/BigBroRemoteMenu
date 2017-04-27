@@ -30,7 +30,7 @@
         }
       ?>
       <li class="last">&nbsp;</li>
-      <li class="last">&nbsp;</li>
+      <li class="last">&nbsp;&nbsp;</li>
     </ul>
   </div>
 </div>
