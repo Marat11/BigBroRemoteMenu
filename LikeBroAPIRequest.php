@@ -12,8 +12,8 @@ class LikeBroAPIRequest
 
         $result = curl_exec($ch);
 
-        $data = json_decode($result);
-        $data = $data->data;
+        $data = json_decode($result,true);
+        $data = $data['data'];
 
         include 'views/bar.php';
     }
